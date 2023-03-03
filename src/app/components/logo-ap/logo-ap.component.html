@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row justify-content-between">
+    <div class="col col-sm-2 col-md-2 col-lg-2 text-center">
+      <img src="../../../assets/APLogo.png" id="LogoAP" />
+    </div>
+
+    <div class="col col-sm-3 col-md-3 col-lg-3 text-center">
+      <div class="row g-1 p-2 justify-content-around">
+        <div class="col col-sm-2 col-md-2 col-lg-2">
+          <a href="http://"
+            ><img src="../../../assets/linkedin.png" id="linkedin"
+          /></a>
+        </div>
+        <div class="col col-sm-2 col-md-2 col-lg-2">
+          <a href="http://"
+            ><img src="../../../assets/twitter.png" id="twitter"
+          /></a>
+        </div>
+        <div class="col col-sm-2 col-md-2 col-lg-2">
+          <a href="http://"
+            ><img src="../../../assets/instagram.png" id="instagram"
+          /></a>
+        </div>
+        <div class="col col-sm-2 col-md-2 col-lg-2">
+          <a href="http://"
+            ><img src="../../../assets/github.png" id="github"
+          /></a>
+        </div>
+        <div class="col col-sm-2 col-md-2 col-lg-2">
+          <a href="http://"
+            ><img src="../../../assets/facebook.png" id="facebook"
+          /></a>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col col-sm-12 col-md-12 col-lg-12 m-3 ">
+          <button type="button" (click)="login()" *ngIf="!islogged" class="btn btn-success">
+            <h3> Ingresar </h3>
+          </button>
+          <button type="button" (click)="onLogOut()" *ngIf="islogged" class="btn btn-success">
+            <h3>Cerrar Sesión</h3>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

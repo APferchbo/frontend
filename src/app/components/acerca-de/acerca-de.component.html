@@ -1,0 +1,22 @@
+<div class="row">
+    <div >
+        <button class="btn btn-primary" routerLink="/editad/1" *ngIf="isLogged">
+            <i class="bi bi-pen-fill"></i> Editar
+        </button>
+    </div>
+  <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+    <img src={{per.img}} id="f_perfil" alt="" class="img-fluid" />
+  </div>
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+    <p id="nombre">{{ per.nombre }} {{ per.apellido }}</p>
+    <p>Full Stack Developer Junior</p>
+  </div>
+  <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+    <span>
+      <h1>Acerca de mí</h1>
+      <p>
+        {{ per.descrip }}
+      </p>
+    </span>
+  </div>
+</div>

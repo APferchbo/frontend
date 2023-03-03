@@ -1,0 +1,9 @@
+.container-fluid{
+    background-color: #3d6717;
+}
+h1,p,h3{
+    color: #EEFAFA;
+}
+.img-proyecto{
+    box-shadow: 10px 10px 30px #000000;
+}

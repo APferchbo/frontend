@@ -1,0 +1,10 @@
+.container-fluid{
+    background-color: #3d6717;
+}
+
+app-social{
+    float:right;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+}

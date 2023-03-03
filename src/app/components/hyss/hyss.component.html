@@ -1,0 +1,201 @@
+<div class="container-fluid text-center p-5">
+  <h1>Habilidades</h1>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+      <h1>Duras</h1>
+      <div>
+        <button type="button" class="btn btn-primary" routerLink="/nuevahys" *ngIf="isLogged">
+          Nueva habilidad
+      </button>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let Skills of Skills">
+          <circle-progress
+            [percent]="(Skills.porS)"
+            [radius]="70"
+            [imageSrc]="''"
+            [title]="(Skills.nomS)"
+            [showImage]="false"
+            [showTitle]="true"
+            [imageHeight]="75"
+            [imageWidth]="55"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-primary"
+              routerLink="/edithys/{{ Skills.id }}"
+            >
+              <i class="bi bi-pen-fill"></i>
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-primary" (click)="delete(Skills.id)">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </td>
+        </div>
+      </div>
+
+       
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+      <h1>Blandas</h1>
+      <div class="row justify-content-center">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/rapidoAprendizaje.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="75"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/AdaptabilidadCambios..png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="75"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/Creatividad.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="75"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/EspirituServicio.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="55"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/OptimizaTiempo.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="55"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/OrientadoResultados.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="55"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/FacilidadEnseñar.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="55"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/EscuchaActiva.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="55"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [imageSrc]="'../assets/FacilidadComunicar.png'"
+            [showImage]="true"
+            [imageHeight]="75"
+            [imageWidth]="55"
+            [outerStrokeWidth]="8"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#EEFAFA'"
+            [innerStrokeColor]="'#93C266'"
+            [animation]="true"
+            [animationDuration]="1000"
+          ></circle-progress>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
