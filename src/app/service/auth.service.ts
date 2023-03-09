@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  //authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://backend-production-7129.up.railway.app/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

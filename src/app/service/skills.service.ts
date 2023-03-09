@@ -6,7 +6,7 @@ import { Skills } from '../model/skills';
 @Injectable({
   providedIn: 'root'
 })
-export class SkillsService {URL = 'http://localhost:8080/hyskills/';
+export class SkillsService {URL = 'https://backend-production-7129.up.railway.app/hyskills/';
 
 constructor(private httpClient: HttpClient) { }
 
