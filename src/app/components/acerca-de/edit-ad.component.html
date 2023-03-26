@@ -43,10 +43,18 @@
             id="Pimg"
             name="Pimg"
             [(ngModel)]="per.img"
-            (change)="uploadimage($event)"
+            (change)="uploadImage($event)"
             accept=".jpg,.png,.jpeg,.gif"
           />
         </div>
+
+<div class="imagen">
+
+  <img [src]="imgService.url" width="300px">
+
+</div>
+
+        <br>
         <button type="submit" class="btn btn-primary">
           Actualizar persona
         </button>

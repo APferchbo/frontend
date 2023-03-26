@@ -7,7 +7,9 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'https://backend-production-7129.up.railway.app/explab/'
+  //expURL = 'https://spring-380203.rj.r.appspot.com/explab/'
+  expURL = 'http://localhost:8080/explab/'
+  
 
   constructor(private httpClient: HttpClient) { }
 

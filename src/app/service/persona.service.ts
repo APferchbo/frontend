@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'https://backend-production-7129.up.railway.app/persona/';
+  URL = 'http://localhost:8080/persona/';
+  //URL = 'https://spring-380203.rj.r.appspot.com/persona/';
 
   constructor(private httpClient: HttpClient) { }
 

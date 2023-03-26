@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'nuevaexp', component: NewExperienciaComponent},
   {path: 'editexp/:id', component: EditExperienciaComponent},
-  {path: 'educacion/:id', component: EditEducacionComponent},
+  {path: 'editedu/:id', component: EditEducacionComponent},
   {path: 'nuevaedu', component: NewEducacionComponent},
   {path: 'nuevahys', component: NewSkillsComponent},
   {path: 'edithys/:id', component: EditSkillsComponent},

@@ -1,26 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Skills } from '../model/skills';
+import { skills } from '../model/skills';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SkillsService {URL = 'https://backend-production-7129.up.railway.app/hyskills/';
-
+export class skillsService {
+  //URL = 'https://spring-380203.rj.r.appspot.com/hyskills/';
+  URL = 'http://localhost:8080/hyskills/';
+  
 constructor(private httpClient: HttpClient) { }
 
-public lista(): Observable<Skills[]>{
-  return this.httpClient.get<Skills[]>(this.URL+'lista');
+public lista(): Observable<skills[]>{
+  return this.httpClient.get<skills[]>(this.URL+'lista');
 }
-public detail(id:  number): Observable<Skills>{
-  return this.httpClient.get<Skills>(this.URL + `detail/${id}`);
+public detail(id:  number): Observable<skills>{
+  return this.httpClient.get<skills>(this.URL + `detail/${id}`);
 }
-public save(Skills:Skills): Observable<any>{
-  return this.httpClient.post<any>(this.URL + 'create', Skills);
+public save(skills:skills): Observable<any>{
+  return this.httpClient.post<any>(this.URL + 'create', skills);
 }
-public update(id: number, Skills: Skills): Observable<any>{
-  return this.httpClient.put<any>(this.URL + `update/${id}`, Skills);
+public update(id: number, skills: skills): Observable<any>{
+  return this.httpClient.put<any>(this.URL + `update/${id}`, skills);
 }
 public delete(id: number): Observable<any>{
   return this.httpClient.delete<any>(this.URL + `delete/${id}`);

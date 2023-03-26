@@ -9,16 +9,16 @@
       </button>
       </div>
       <div class="row justify-content-center">
-        <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let Skills of Skills">
+        <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let skills of skills">
           <circle-progress
-            [percent]="(Skills.porS)"
+            [percent]="(skills.porSH)"
             [radius]="70"
-            [imageSrc]="''"
-            [title]="(Skills.nomS)"
-            [showImage]="false"
-            [showTitle]="true"
+            [imageSrc]="(skills.img)"
+            [title]="(skills.nomSH)"
+            [showImage]="true"
+            [showTitle]="false"
             [imageHeight]="75"
-            [imageWidth]="55"
+            [imageWidth]="75"
             [outerStrokeWidth]="8"
             [innerStrokeWidth]="2"
             [outerStrokeColor]="'#EEFAFA'"
@@ -29,13 +29,13 @@
           <td *ngIf="isLogged">
             <button
               class="btn btn-primary"
-              routerLink="/edithys/{{ Skills.id }}"
+              routerLink="/edithys/{{ skills.id }}"
             >
               <i class="bi bi-pen-fill"></i>
             </button>
           </td>
           <td *ngIf="isLogged">
-            <button class="btn btn-primary" (click)="delete(Skills.id)">
+            <button class="btn btn-primary" (click)="delete(skills.id)">
               <i class="bi bi-x-lg"></i>
             </button>
           </td>

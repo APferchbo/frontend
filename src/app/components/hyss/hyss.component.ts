@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Skills } from 'src/app/model/skills';
-import { SkillsService } from 'src/app/service/skills.service';
+import { skills } from 'src/app/model/skills';
+import { skillsService } from 'src/app/service/skills.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -9,9 +9,9 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./hyss.component.css']
 })
 export class HyssComponent implements OnInit {
-  Skills: Skills [] = [];
+  skills: skills [] = [];
 
-  constructor(private shys: SkillsService, private tokenService: TokenService) { }
+  constructor(private shys: skillsService, private tokenService: TokenService) { }
 
   isLogged = false;
 
@@ -25,7 +25,7 @@ export class HyssComponent implements OnInit {
   }
 
   cargarHys(): void {
-    this.shys.lista().subscribe(data => { this.Skills = data; })
+    this.shys.lista().subscribe(data => { this.skills = data; })
   }
   delete(id?: number) {
     if (id != undefined) {

@@ -26,6 +26,9 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
 import { NewSkillsComponent } from './components/hyss/new-skills.component';
 import { EditSkillsComponent } from './components/hyss/edit-skills.component';
 import { EditAdComponent } from './components/acerca-de/edit-ad.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,9 @@ import { EditAdComponent } from './components/acerca-de/edit-ad.component';
     BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

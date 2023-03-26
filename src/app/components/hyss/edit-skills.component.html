@@ -1,19 +1,51 @@
 <div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="EnombreE">Nombre de la habilidad</label>
-                    <input type="text" class="form-control" id="EnombreE" name="EnombreE" [(ngModel)]="hys.nomS" required>
-                </div>
-                <div class="form-group">
-                    <label for="EdescripcionE">Porcentaje de la habilidad</label>
-                    <input type="text" class="form-control" id="EdescripcionE" name="EdescripcionE" [(ngModel)]="hys.porS" required>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    Actualizar habilidad
-                </button>
-            </form>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nHYSH">Nombre de la habilidad</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nHYSH"
+            name="nHYSH"
+            [(ngModel)]="hys.nomSH"
+            required
+          />
         </div>
+        <div class="form-group">
+          <label for="pHYSH">Porcentaje de la habilidad</label>
+          <input
+            type="text"
+            class="form-control"
+            id="pHYSH"
+            name="pHYSH"
+            [(ngModel)]="hys.porSH"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="iHYSH">URL de la imagen</label>
+          <input
+            type="text"
+            class="form-control"
+            id="iHYSH"
+            name="iHYSH"
+            [(ngModel)]="hys.img"
+            (change)="uploadImage($event)"
+            accept=".jpg,.png,.jpeg,.gif"
+          />
+        </div>
+        <div class="imagen">
+
+          <img [src]="imgService.url" width="300px">
+        
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">
+          Actualizar habilidad
+        </button>
+      </form>
     </div>
+  </div>
 </div>

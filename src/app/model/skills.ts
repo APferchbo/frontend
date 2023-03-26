@@ -1,10 +1,12 @@
-export class Skills {
+export class skills{
     id?: number;
-    nomS: string;
-    porS: number;
+    nomSH: string;
+    porSH: number;
+    img: string;
 
-    constructor(nomS: string, porS: number){
-        this.nomS = nomS;
-        this.porS = porS;
+    constructor(nomSH: string, porSH: number, img: string){
+        this.nomSH = nomSH;
+        this.porSH = porSH;
+        this.img = img;
     }
 }
