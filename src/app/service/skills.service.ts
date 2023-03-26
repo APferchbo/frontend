@@ -7,8 +7,8 @@ import { skills } from '../model/skills';
   providedIn: 'root'
 })
 export class skillsService {
-  //URL = 'https://spring-380203.rj.r.appspot.com/hyskills/';
-  URL = 'http://localhost:8080/hyskills/';
+  URL = 'https://apferchbo.rj.r.appspot.com/hyskills/';
+ // URL = 'http://localhost:8080/hyskills/';
   
 constructor(private httpClient: HttpClient) { }
 

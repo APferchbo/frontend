@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "fhbofrontend"
-  }
+    "default": "apfer-97a3a",
+    "AP": "apfer-97a3a"
+  },
+  "targets": {},
+  "etags": {}
 }
